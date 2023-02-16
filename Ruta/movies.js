@@ -47,5 +47,43 @@ router.get('/obtenermovies', (req, res) => {
         }
     })
 
+})
 
+//obtener data de usuario
+
+router.post('/obtenerdatamovie', (req, res) => {
+    ModelMovies.find({idmovie:req.body.idmovie}, function(docs, err){
+        if(!err){
+            res.send(docs);
+        } else {
+            res.send(err);
+        }
+    })
+
+})
+
+// actualizar movie
+router.post('/actualizarmovie', (req, res) => {
+    ModelMovies.findOneAndUpdate({idmovie:req.body.idmovie},{
+        title: req.body.title,
+        year: req.body.year,
+        time: req.body.time
+    }, (err) => {
+        if(!err){
+            res.send('Usuario actualizado correctamente');
+        } else {
+            res.send(err);
+        }
+    })
+})
+
+//Elimnar usuario
+router.post('/borrarmovie', (req, res) => {
+    ModelMovies.findOneAndDelete({idmovie:req.body.idmovie}, (err) =>{
+        if(!err){
+            res.send('Movie borrado correctamente');
+        } else {
+            res.send(err);
+        }
+    })
 })
