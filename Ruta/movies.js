@@ -18,6 +18,8 @@ module.exports = router;
 //     res.end('saludo carga desde ruta ejemplo');
 // })
 
+//agregar usuario
+
 router.post('/agregarmovie', (req, res) => {
     const nuevamovie = new ModelMovies({
         title: req.body.title,
@@ -32,4 +34,18 @@ router.post('/agregarmovie', (req, res) => {
             res.send(err);
         }
     })
+})
+
+//obtener todos los usuarios
+
+router.get('/obtenermovies', (req, res) => {
+    ModelMovies.find({}, function(docs, err){
+        if(!err){
+            res.send(docs);
+        } else {
+            res.send(err);
+        }
+    })
+
+
 })
