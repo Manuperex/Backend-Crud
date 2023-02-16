@@ -38,7 +38,7 @@ router.post('/agregarmovie', (req, res) => {
 
 //obtener todos los usuarios
 
-router.get('/obtenermovies', (req, res) => {
+router.get('/', (req, res) => {
     ModelMovies.find({}, function(docs, err){
         if(!err){
             res.send(docs);

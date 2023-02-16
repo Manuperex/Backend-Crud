@@ -23,12 +23,7 @@ app.use(bodyParser.json())
 
 app.use(bodyParser.urlencoded({extended: 'true'}))
 
-app.use('/api/movie', rutamovie);
-
-
-app.get('/', (req, res) => {
-    res.end('Bienvenidos al servidor backend node.js corriendo...')
-})
+app.use('/movie', rutamovie);
 
 
 //configure the basic server
