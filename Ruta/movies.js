@@ -45,6 +45,7 @@ router.get('/obtenermovies', (req, res) => {
         } else {
             res.send(err);
         }
+        res.json(docs)
     })
 
 })
@@ -87,3 +88,4 @@ router.post('/borrarmovie', (req, res) => {
         }
     })
 })
+
