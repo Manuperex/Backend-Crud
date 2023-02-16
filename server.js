@@ -2,7 +2,14 @@ const express = require('express');
 const app = express();
 const cors =require('cors');
 
-
+const corsOption={
+    origin:"*",
+    method:["GET", "POST", "PUT", "DELETE"],
+    allowedHeaders:["Origin", "X-Requested-With", "Content-Type", "Accept"],
+    credentials: true
+  };
+  
+app.use(cors(corsOption));
 //Import connection mongoDB
 const archivoBD = require('./Connection')
 
@@ -13,7 +20,7 @@ const rutamovie = require('./Ruta/movies')
 
 const bodyParser = require('body-parser');
 app.use(bodyParser.json())
-app.use(cors());
+
 app.use(bodyParser.urlencoded({extended: 'true'}))
 
 app.use('/api/movie', rutamovie);
