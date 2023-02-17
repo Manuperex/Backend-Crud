@@ -9,7 +9,6 @@ const schemamovie = new schema({
     year: String,
     time: String,
     year: String,
-    time: String,
     lang: String,
     gender: String,
     country:String,
@@ -77,7 +76,18 @@ router.post('/actualizarmovie', (req, res) => {
     ModelMovies.findOneAndUpdate({idmovie:req.body.idmovie},{
         title: req.body.title,
         year: req.body.year,
-        time: req.body.time
+        time: req.body.time,
+        lang: req.body.lang,
+        gender: req.body.gender,
+        country:req.body.country,
+        reviewername: req.body.reviewername,
+        rev_stars: req.body.rev_stars,
+        ratings: req.body.ratings,
+        dt_rel: req.body.dt_rel,
+        actorname: req.body.actorname,
+        aGender: req.body.aGender,
+        role: req.body.role,
+        directorname: req.body.directorname,
     }, (err) => {
         if(!err){
             res.send('Usuario actualizado correctamente');
