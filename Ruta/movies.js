@@ -8,6 +8,19 @@ const schemamovie = new schema({
     title: String,
     year: String,
     time: String,
+    year: String,
+    time: String,
+    lang: String,
+    gender: String,
+    country:String,
+    reviewername: String,
+    rev_stars: String,
+    ratings: Number,
+    dt_rel: String,
+    actorname: String,
+    aGender: String,
+    role: String,
+    directorname: String,
     idmovie: String
 })
 
