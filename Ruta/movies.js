@@ -37,7 +37,17 @@ router.post('/agregarmovie', (req, res) => {
         title: req.body.title,
         year: req.body.year,
         time: req.body.time,
-        idmovie: req.body.idmovie
+        lang: req.body.lang,
+        gender: req.body.gender,
+        country:req.body.country,
+        reviewername: req.body.reviewername,
+        rev_stars: req.body.rev_stars,
+        ratings: req.body.ratings,
+        dt_rel: req.body.dt_rel,
+        actorname: req.body.actorname,
+        aGender: req.body.aGender,
+        role: req.body.role,
+        directorname: req.body.directorname,
     })
     nuevamovie.save(function(err) {
         if(!err){
