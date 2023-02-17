@@ -39,4 +39,6 @@ El deploy del servidor se hizo en ashboard.render.com que es una pagian web dond
 
 ![image](https://user-images.githubusercontent.com/104181677/219682579-8e3190f8-6a56-480f-9a17-7fa3820f6bce.png)
 
+Y asi usando los links de ese despliegue se cambiara en el Frontend por los localhost y quedaria funcionando, claro copiando despues los endpoint podremos realizar el CRUD con normalidad.
 
+Este proyecto se probó en Postman y funciona correctamente, si quieres pruebas, creame jajajaja.
